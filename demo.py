@@ -91,6 +91,9 @@ MPC_step = ocp.to_function('MPC_step', [x0], [ocp.value(ocp.at_t0(u))], ["x0"], 
 
 MPC_step.generate('MPC_step.c',{"main":True})
 
+# $ gcc MPC_step.c -lm -o MPC_step
+# $ ./MPC_step 'MPC_step' < in.txt
+
 raise Exception()
 
 current_x = start_x
